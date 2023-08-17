@@ -12,3 +12,5 @@ For documentation and instructions see https://jasonwatmore.com/post/2020/05/13/
 4. Reset password: truyền token ở bước 3 + password mới. Hệ thống sẽ remove resetToken đi, và update lại password + update thời gian passwordReset
 5. Authentication: Có passwordReset -> Chứng tỏ email đúng; có verified -> Chứng tỏ đã verify
 6. RefreshToken: Lấy trong cookie lên giá trị refreshToken để sinh mới
+7. RevokeToken: truyền JWT vào Bearer, và token vào body hoặc lấy từ cookie
+8. List Accounts: là admin
