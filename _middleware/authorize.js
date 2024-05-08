@@ -17,6 +17,9 @@ function authorize(roles = []) {
 
     // authorize based on user role
     async (req, res, next) => {
+      // In ra JWT token
+      console.log('JWT Token:', req.headers.authorization.split(' ')[1])
+
       const account = await db.Account.findById(req.user.id)
       const refreshTokens = await db.RefreshToken.find({ account: account.id })
 
